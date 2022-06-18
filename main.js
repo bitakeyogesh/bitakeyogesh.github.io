@@ -27,7 +27,7 @@ navBarButton.addEventListener('click', () => {
 
 const navLinks = document.getElementsByClassName('nav-link');
 const sectionContainers = document.getElementsByClassName('section-container');
-
+const canvas = document.getElementsByTagName('canvas')[0];
 for (let link of navLinks) {
     link.addEventListener('click', (event) => {
         const activeNavItem = event.target.id;
@@ -35,6 +35,12 @@ for (let link of navLinks) {
             link.classList.remove("activeLink");
         }
         link.classList.toggle("activeLink");
+        if(activeNavItem === 'home'){
+            canvas.classList.remove("invisible");
+        }
+        else {
+            canvas.classList.add("invisible");
+        }
         for (let container of sectionContainers) {
             container.classList.remove("active");
             if (container.className.includes(`${activeNavItem}-section`)) {
