@@ -11,6 +11,8 @@
 html {
     overflow: hidden;
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 body {
     /* font-family: 'Roboto', 'sans-serif'; */
@@ -19,6 +21,8 @@ body {
     padding: 0;
     overflow: auto;
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .background {
