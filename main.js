@@ -41,5 +41,9 @@ for (let link of navLinks) {
                 container.classList.add("active");
             }
         }
+        const isNavBarToggled = navbarCollapseElement.className.includes('show');
+        if (isNavBarToggled) {
+            navbarCollapseElement.classList.toggle("show");
+        }
     })
 }
